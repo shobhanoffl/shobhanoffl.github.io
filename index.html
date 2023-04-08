@@ -42,10 +42,102 @@
 .third:hover {
   box-shadow: 0 0 10px 0 #036ffb inset, 0 0 10px 4px #036ffb;
 }
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+.main__container {
+  width: 48%;
+  height: 400px;
+  margin-bottom: 1.5rem;
+}
+.main__container.black {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main__container.white {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.main__disclaimer {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+.main__disclaimer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35rem;
+  max-width: 100%;
+  padding: 1.5rem;
+  text-align: center;
+}
+.main__disclaimer-title {
+  font-family: "Arial";
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px #000;
+
+}
+.main__disclaimer-button {
+	border-radius: 15px;
+  padding: 0.5rem 2rem;
+  background-image: linear-gradient(90deg, #036ffb 0%, #77b2ff 51%, #036ffb);
+  background-size: 200% auto;
+  color: #ffffff;
+  border: 0;
+  transition: 0.2s;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.main__disclaimer-button:hover {
+  background-position: 100%;
+  transition: 0.2s;
+}
+.main__disclaimer-button:focus {
+  outline: 0;
+}
+
+.blurred {
+  filter: blur(15px);
+}
+
+.fade {
+  transform: scale(0);
+  transition: 0.4s;
+}
+
+.fade:not(.show) {
+  z-index: -1;
+}
 	</style>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+	<div class="main__disclaimer js-disclaimer">
+		<div class="main__disclaimer-content">
+		  <h1 class="main__disclaimer-title">
+			Kindly view this Site in Web View for <br><br> Best Experience<br><br><br>
+		  </h1>
+		  <button class="main__disclaimer-button js-close-disclaimer" id="closepop">
+			Click
+		  </button>
+		</div>
+	  </div>
 	<video autoplay loop muted id="bg-video">
 		<source src="assets/images/space.mp4" type="video/mp4">
 		<source src="assets/images/space.mp4" type="video/webm">
@@ -79,5 +171,19 @@
 	<script src="js/typeit.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+		document.body.onload = () => {
+  window.scrollTo(0,0);
+  const close = document.querySelector('.js-close-disclaimer')
+  close.onclick = () => {
+    document.querySelector('.js-disclaimer').classList.add('fade')
+    document.body.style.overflow = 'auto'
+    document.querySelector('.js-main').classList.remove('blurred')
+    document.querySelector('.js-hero').classList.remove('blurred')
+  }
+}
+
+
+	</script>
 </body>
 </html>

@@ -15,32 +15,34 @@ $(document).ready(function(){
     }
   });
 
-
-  const instance = new TypeIt(".gen", { 
-    speed: 80
-  })
-	.type("G")
-	.pause(100)
-	.type("E")
-	.pause(100)
-	.type("N")
-	.pause(100)
-	.type("E")
-	.pause(100)
-	.type("R")
-	.pause(100)
-	.type("A")
-	.pause(100)
-	.type("L")
-	.pause(100)
-	.type("I")
-	.pause(100)
-	.type("S")
-	.pause(100)
-	.type("T")
-	.go();
-
-
+  document.getElementById("closepop").addEventListener("click",() => {
+    // window.open('index.html', '_self');
+    const instance = new TypeIt(".gen", { 
+      speed: 80
+    })
+    .type("G")
+    .pause(100)
+    .type("E")
+    .pause(100)
+    .type("N")
+    .pause(100)
+    .type("E")
+    .pause(100)
+    .type("R")
+    .pause(100)
+    .type("A")
+    .pause(100)
+    .type("L")
+    .pause(100)
+	  .type("I")
+	  .pause(100)
+	  .type("S")
+	  .pause(100)
+	  .type("T")
+	  .go();
+  });
+  
+  
   // setTimeout(function() {
   //   instance.freeze();
   //   // window.removeEventListener('scroll', disableScroll);
