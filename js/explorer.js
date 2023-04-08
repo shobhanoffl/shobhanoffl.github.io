@@ -68,6 +68,6 @@ $(document).ready(function(){
   });
   
   document.getElementById("shutdown").addEventListener("click",() => {
-    window.open('home.html', '_self');
+    window.open('index.html', '_self');
   });
 });
