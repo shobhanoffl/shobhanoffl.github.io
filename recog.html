@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="css/works.css">
+   <title>Photo Gallery</title>
+</head>
+<body class="w3-content" style="max-width:1600px">
+    <div class="centered-text">
+        <h1>Recognitions</h1>
+        <p>Prizes . Achievements . Stuff I feel good about</p>
+      </div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="/assets/images/fullstack.jpg" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="Conducted a 6 hour Workshop" lang="#">
+      <img src="/assets/images/iitm.jpg" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="2nd Prize in Student Hackathon on Vision & AI, IITM Research Park" lang="https://www.linkedin.com/posts/shobhanoffl_latepost-activity-7038097609751764992-E3em?utm_source=share&utm_medium=member_desktop">
+      <img src="/assets/images/fibrejpg.jpg" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="1st Prize in FIBRE Hackathon 2022" lang="https://www.linkedin.com/posts/shobhanoffl_fibre-hackathon-sona-activity-6932740711511379968-6QLc?utm_source=share&utm_medium=member_desktop">
+    </div>
+
+    <div class="w3-third">
+      <img src="/assets/images/sssf.jpg" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="1st Prize in Sona Students Speakers Forum" lang="https://www.linkedin.com/posts/shobhanoffl_sona-speakers-forum-has-been-one-of-the-great-activity-7028032710468124673-lWhQ?utm_source=share&utm_medium=member_desktop">
+      <img src="/assets/images/cisco.jpg" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="Cisco Campus Ambassador, Sona College of Technology (2022-23)" lang="https://www.linkedin.com/posts/shobhanoffl_hello-connections-happy-to-share-with-activity-6948614627085684737-7XL0?utm_source=share&utm_medium=member_desktop">
+    </div>
+    
+    <div class="w3-third">
+      <img src="/assets/images/merit.jpg" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="2nd Rank in Semester End Examinations" lang="https://www.linkedin.com/posts/shobhanoffl_latepost-sona-semester-activity-6941638287019126784-zhMV?utm_source=share&utm_medium=member_desktop">
+      <img src="/assets/images/variant.jpg" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="Special Mention Variant 3D 4-Week Mentorship" lang="https://devpost.com/software/fabsmart">
+      <img src="/assets/images/police.jpg" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="Appreciation from Salem City Police for 'Migrant Care' Mobile Application" lang="#">
+    <!-- <img src="https://source.unsplash.com/1600x909/?nature,water" style="object-fit:cover;width:100%" onclick="onClick(this)" alt="Turkish Sunrise, Winter 2017"> -->
+    </div>
+  </div>
+
+ 
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  if(element.lang!="#"){
+    captionText.innerHTML = element.alt+"<br>"+"<a href='"+element.lang+"' target='_blank'>More Details</a>";
+  }else{
+    captionText.innerHTML = element.alt;    
+  }
+}
+
+</script>
+</body>
+</html>

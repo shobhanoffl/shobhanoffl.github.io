@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* scroll-behavior: smooth; */
+}
+
+body {
+	font-family: sans-serif;
+}
+
+#bg-video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 98.8vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: 0;
+}
+
+.parallax {
+	/* background-image: url("ass
+	ets/images/clouds.gif"); */
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 140vh;
+    width: 98.8vw;
+    margin-top: 68vh;
+    margin-bottom: 80vh;
+	position: relative;
+	z-index: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.content {
+	position: relative;
+	top: 0vh;
+	height: 35vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 5em;
+	color: white;
+}
+
+.content p {
+	text-align: center;
+	text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.parallax:before {
+	scroll-behavior: smooth;	
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	height: 140vh;
+    transform: scale(1.1);
+    background-clip: content-box;
+	background-image: url("/assets/images/hotel2.jpg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+    background-clip: border-box;
+	z-index: 1;
+    margin: 0;
+}
+
+.text #generalist{
+	background: #c02300;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #c02300, #fb3640);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #c02300, #fb3640); /* W3C, IE 10+/ dge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+-webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+}
+.text #ageneralist{
+	background: #c02300;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #c02300, #fb3640);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #c02300, #fb3640); /* W3C, IE 10+/ dge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+-webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+}
+.text {
+    top: 20%;
+    left: 150%;
+    color: #ffffff;
+    font-size: 2em;
+    text-align: center;
+    position: sticky;
+	text-align: center;
+	visibility: visible;
+	/* background: #0a2463; 
+background: -webkit-linear-gradient(to right, #0a2463, #0a2463);  
+background: linear-gradient(to right, #0a2463, #0a2463); 
+    -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text; */
+    /* z-index: 500; */
+}
+.text>h1>b{
+	font-family: 'League Spartan', sans-serif;
+}
+.text>h1{
+	font-family: 'Amatic SC', cursive;
+	font-size: 150px;
+	font-weight: 700;
+}
+
+.scroll-hint {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+}
+
+.scroll-hint{
+	font-size: 1.2em;
+	color: #fff;
+	margin: 0;
+}
+
+.scroll-icon {
+	border: solid #fff;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 5px;
+	transform: rotate(45deg) translateY(0);
+	margin-left: 5px;
+	animation: scrollHint 1s infinite;
+}
+#cdriven{
+	display: inline-block; width: 200px;overflow-wrap: break-word;font-size: 50px;font-weight: 900;
+}
+@font-face {
+	font-family: 'Avenir';
+	src: url('/assets/fonts/Avenir\ Medium\ Oblique.ttf') format('woff2');
+  }
+  
+#myname{
+	/* top: 40%; */
+    /* left: 40%; */
+	/* right: 40%; */
+	top: 125px;
+	width: 80vw;
+	margin-left: auto;
+	margin-right: auto;
+    color: #c02300;
+    font-size: 120px;
+    text-align: center;
+    position: sticky;
+	text-align: center;
+	font-family: 'Avenir'
+}
+
+
+
+
+
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;	
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #036ffb;
+  box-shadow: rgba(3, 111, 251, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  border: 2px solid #036ffb;
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+
+
+
+@keyframes scrollHint {
+	0% {
+		/* transform: rotate(45deg) translateY(20px); */
+		opacity: 1;
+	}
+	50% {
+		/* transform: rotate(45deg) translateY(20px) translateX(0); */
+		opacity: 0;
+	}
+	100% {
+		/* transform: rotate(45deg) translateY(0) translateX(0); */
+		opacity: 1;
+	}
+}

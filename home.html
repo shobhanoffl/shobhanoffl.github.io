@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parallax Example</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		.btn {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: block;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.btn:hover, .btn:focus {
+  color: #fff;
+  outline: 0;
+}
+.third {
+  border-color: #036ffb;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #036ffb inset, 0 0 0 0 #036ffb;
+  transition: all 150ms ease-in-out;
+}
+.third:hover {
+  box-shadow: 0 0 10px 0 #036ffb inset, 0 0 10px 4px #036ffb;
+}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<video autoplay loop muted id="bg-video">
+		<source src="assets/images/space.mp4" type="video/mp4">
+		<source src="assets/images/space.mp4" type="video/webm">
+		Your browser does not support the video tag.
+	</video>
+	
+    <div class="text">
+		<span id="ima" style="font-family: 'Raleway';">I'M &nbsp;A</span>
+		<b id="myname"></b>
+        <h1><b id="ageneralist">A</b> 
+			<span id="cdriven">
+				CURIOSITY <br> DRIVEN 
+			</span>
+			<b id="generalist" class="gen"></b>
+		</h1>	
+		<br><br>
+		<div class="scroll-hint">
+			<div class="scroll-icon" ></div>
+		</div>
+    </div>
+	<div class="parallax"></div>
+	<span id="target"></span>
+
+	<div class="content">
+		<p><span class="button-28" style="font-family: 'Raleway';" onclick="window.open('about.html', '_self');">E X P L O R E</span>
+				<!-- <button class="btn third">LinkedIn</button> -->
+				<span class="btn third"  onclick="window.open('https://github.com/shobhanoffl/', '_blank');"><i style="font-size:25px" class="fa">&#xf09b;</i></span>
+				<span class="btn third"  onclick="window.open('https://www.linkedin.com/in/shobhanoffl/', '_blank');"><i style="font-size:24px" class="fa">&#xf08c;</i></span>
+		</p>
+	</div>
+	<script src="js/typeit.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

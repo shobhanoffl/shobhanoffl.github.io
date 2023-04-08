@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600&display=swap');
+body {
+    margin: 0;
+  }
+  
+  .fullscreen-image {
+    height: 100vh;
+    background: url('/assets/images/hotel2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .overlay {
+      position: absolute;
+      top: 16%;
+      left: 6%;
+      color: white;
+      text-align: center;
+      width: 40%;
+      max-width: 800px;
+    }
+  
+    .overlay h1 {
+    font-size: 4rem;
+    text-align: left;
+}
+
+.overlay p {
+    text-align: justify;
+    font-size: 25px;
+    line-height: 170%;
+    /* font-family: 'Comfortaa', cursive; */
+    /* font-family: 'Sail', cursive; */
+    font-family: 'Martian Mono', monospace;
+  }
+  
