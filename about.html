@@ -15,7 +15,7 @@
         <p class="aboutme">
             <!-- As someone who primarily works in Web & Mobile App Development, I always identify myself as an amateur and curious learner who strives to constantly upgrade myself and expand my boundaries without fear of failure. I design and solve problems, which is why I refer to myself as a Designer & Developer, without limiting myself to a specific niche.         -->
         </p><br><br>
-        <div id="explorebtn" class="button-28" style="font-family: 'Raleway';width: 220px;visibility: hidden;transition-duration: 1s;transition: ease-in;">E X P L O R E &nbsp;&nbsp; N O W</div>
+        <div id="exploresbtn" class="button-28" style="font-family: 'Raleway';width: 220px;visibility: hidden;transition-duration: 1s;transition: ease-in;">E X P L O R E &nbsp;&nbsp; N O W</div>
     </div>
     </div>
   </body>
@@ -23,13 +23,7 @@
 <script src="js/typeit.min.js"></script>
 <script>
     
-    document.getElementById("explorebtn").addEventListener("click",() => {
-        window.open('explorer.html', '_self');
-    });
-
-    setTimeout(function() {
-        document.getElementById("explorebtn").style.visibility="visible";
-    }, 2000);
+    
 
     new TypeIt(".aboutme", { 
     speed: 20
@@ -379,5 +373,13 @@
 .type("e").pause(1)
 .type(".").pause(1)
 .go();
+
+document.getElementById("explorebtn").addEventListener("click",() => {
+        window.open('explorer.html', '_self');
+    });
+
+    setTimeout(function() {
+        document.getElementById("explorebtn").style.visibility="visible";
+    }, 2000);
 </script>
 </html>

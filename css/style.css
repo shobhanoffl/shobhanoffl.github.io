@@ -60,11 +60,11 @@ body {
 	content: "";
 	position: absolute;
 	top: 0;
-	width: 100vw;
-	height: 140vh;
+	width: 100%;
+	height: 170vh;
     transform: scale(1.1);
     background-clip: content-box;
-	background-image: url("/assets/images/hotel2.webp");
+	background-image: url("/assets/images/hotel3.webp");
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
