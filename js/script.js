@@ -1,5 +1,9 @@
 $(document).ready(function(){
   
+  // document.getElementById("generalist").addEventListener("change",() => {
+    // });
+  
+
     $(window).scroll(function(){
       var scroll = $(window).scrollTop();
       $('.parallax').css('background-position', 'center calc(50% + ' + (scroll * 0.2) + 'px)');
@@ -17,16 +21,17 @@ $(document).ready(function(){
 
   document.getElementById("closepop").addEventListener("click",() => {
     // window.open('index.html', '_self');
-    const instance = new TypeIt(".gen", { 
-      speed: 80
-    })
-    .type("G")
-    .pause(100)
-    .type("E")
-    .pause(100)
-    .type("N")
-    .pause(100)
-    .type("E")
+    if(document.getElementById("generalist").innerHTML.trim()==""){
+      const instance = new TypeIt(".gen", { 
+        speed: 80
+      })
+      .type("G")
+      .pause(100)
+      .type("E")
+      .pause(100)
+      .type("N")
+      .pause(100)
+      .type("E")
     .pause(100)
     .type("R")
     .pause(100)
@@ -40,9 +45,14 @@ $(document).ready(function(){
 	  .pause(100)
 	  .type("T")
 	  .go();
+  }
   });
+
   
-  
+  setTimeout(function() {
+    document.getElementById("generalist").innerHTML = document.getElementById("generalist").innerHTML.substring(0,10);
+    // window.removeEventListener('scroll', disableScroll);
+  }, 500);
   // setTimeout(function() {
   //   instance.freeze();
   //   // window.removeEventListener('scroll', disableScroll);
